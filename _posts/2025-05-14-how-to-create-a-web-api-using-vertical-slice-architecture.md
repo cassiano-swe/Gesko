@@ -39,6 +39,7 @@ git add .;
 git commit -m "first commit";
 ```
 
+
 ### 📌 API
 
 #### 📁 ../Contacts-app/src/Contacts.api
@@ -55,6 +56,7 @@ mkdir Features && cd $_;
 mkdir Contacts && cd $_;
 ```
 
+
 #### ../Contacts-app/src/Contacts.api/Endpoints/IEndpoint.cs
 
 ```c#
@@ -65,6 +67,7 @@ public interface IEndpoint
     void MapEndpoint(IEndpointRouteBuilder app);
 }
 ```
+
 
 #### ../Contacts-app/src/Contacts.api/Endpoints/EndpointExtensions.cs 
 
@@ -113,6 +116,7 @@ public static class EndpointExtensions
 } 
 ```
 
+
 #### ../Contacts-app/src/Contacts.api/Entities/Contacts.cs
 
 ```c#
@@ -125,6 +129,7 @@ public class Contact{
     public string PhoneNumber {get; set;} = string.Empty;
 }
 ```
+
 
 #### ../Contacts-app/src/Contacts.api/Database/ContactsDbContext.cs
 
@@ -143,6 +148,7 @@ public class ContactsDbContext: DbContext
     public DbSet<Contact> Contacts{get; init;}
 }
 ```
+
 
 #### ../Contacts-app/src/Contacts.api/Program.cs
 
@@ -172,6 +178,7 @@ app.MapEndpoints();
 
 app.Run();
 ```
+
 
 ### 📌 Use Cases
 
@@ -210,6 +217,7 @@ public static class CreateContact
 }
 ```
 
+
 #### ../Contacts-app/src/Contacts.api/Features/Contacts/GetContact.cs
 
 ```c#
@@ -246,6 +254,7 @@ public static class GetContact
 }
 ```
 
+
 #### ../Contacts-app/src/Contacts.api/Features/Contacts/GetContacts.cs
 
 ```c#
@@ -277,6 +286,7 @@ public static class GetContacts
     }
 }
 ```
+
 
 #### ../Contacts-app/src/Contacts.api/Features/Contacts/RemoveContact.cs
 
@@ -313,6 +323,7 @@ public static class RemoveContact
     }
 }
 ```
+
 
 #### ../Contacts-app/src/Contacts.api/Features/Contacts/UpdateContact.cs
 
@@ -355,6 +366,7 @@ public static class UpdateContact
     }
 }
 ```
+
 
 ### Docker File
 
